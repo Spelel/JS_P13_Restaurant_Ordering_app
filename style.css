@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+} 
+
+
+.header-inner{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 1000px;
+    height: 290px;
+    background-image: url(images/image.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    
+}
+
+h1{
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    padding-bottom: 45px;
+}
+
+
+h1, h2 {
+    color: whitesmoke;
+    margin: auto;
+    padding-left: 50px
+}
