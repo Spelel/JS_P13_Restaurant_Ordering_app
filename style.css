@@ -30,3 +30,38 @@ h1, h2 {
     margin: auto;
     padding-left: 50px
 }
+
+
+.foodList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin: 15px auto 15px;
+    width: 600px;
+}
+
+.pizza, .hamburger, .beer {
+    padding: 25px 0 25px 0;
+    margin: 0 auto 0;
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DEDEDE;
+    /* border: 1px solid black; */
+}
+
+.extMenu {
+    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foodImg {
+    font-size: 5em;
+}
