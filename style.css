@@ -38,7 +38,7 @@ h1, h2 {
     justify-content: space-between;
     align-items: start;
     margin: 15px auto 15px;
-    width: 600px;
+    width: 660px;
 }
 
 .pizza, .hamburger, .beer {
@@ -46,10 +46,10 @@ h1, h2 {
     margin: 0 auto 0;
     display: flex;
     width: inherit;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     border-bottom: 1px solid #DEDEDE;
-    /* border: 1px solid black; */
+    font-size: 18px;
 }
 
 .extMenu {
@@ -64,4 +64,64 @@ h1, h2 {
 
 .foodImg {
     font-size: 5em;
+    padding-right: 20px;
 }
+
+.lineEndOrder {
+    border-bottom: 2px solid #393333;
+    margin: 25px 0 0 0;
+}
+
+.yourOrder{
+    font-size: 2em;
+    margin: 25px auto 50px;
+    text-align: center;
+    
+}
+
+.orderListItems {
+    font-size: 25px;
+    width: 660px;
+    /* border: 1px solid black; */
+    margin: 25px auto 0px;
+}
+
+
+.btn {
+    text-align: center;
+}
+
+.completeOrderBtn {
+    width: 660px;
+    height: 50px;
+    border-radius: 2%;
+    background-color: #16DB99;
+    margin: 25px auto;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.oneItem, .receipt {
+    display: flex;
+    margin: 15px auto 0;
+    justify-content: start;
+    align-items: center;
+}
+
+.payValue {
+    margin: 0 auto 0 0;
+}
+
+.price, .extMenu {
+    margin: 0 0 0 auto;
+}
+
+.removeBtn {
+    border: none;
+    background-color: white;
+    margin: 0 0 0 10px;
+    color: #BBBBBB;
+}
+

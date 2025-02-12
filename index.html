@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R</title>
+    <title>ROAPP</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
                 <div class="foodImg">🍕</div>
                 <div class="pizzaInfo">
                     <p>Pizza</p>
-                    <p>pepperoni,mushrom,mozarella</p>
+                    <p>pepperoni, mushrom, mozarella</p>
                     <p>$14</p>
                 </div>
                 <div class="extMenu">+</div>
@@ -51,6 +51,32 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="yourOrder">Your order</div>
+        <div class="orderListItems">
+            
+            <div class="oneItem">
+                <div id="menuItem">Pizza</div>
+                <div>
+                    <button class="removeBtn" id="removeBtn">remove</button>
+                </div>  
+                <div class="price" id="price">$14</div>
+            </div>
+
+            <!-- -------------------------Separator Line------------------------------- -->
+            <div class="lineEndOrder"></div>
+            <!-- -------------------------Separator Line------------------------------- -->
+            
+            <div class="receipt">
+                <div class="payValue">Total price:</div>
+                <div class="totalSum">$26</div>
+            </div>
+            
+            <div class="btn">
+                <button class="completeOrderBtn">Complete order</button>
+            </div>
+    </footer>
 
     <script src="index.js" type="module"></script>
 </body>
