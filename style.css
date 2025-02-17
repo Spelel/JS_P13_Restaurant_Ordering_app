@@ -30,6 +30,17 @@ h1, h2 {
     padding-left: 50px
 }
 
+.extMenuBtn {
+    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+
+}
+
+.extMenuBtn:hover {
+    border: 1px solid rgb(116, 110, 110);
+}
 
 .foodList {
     display: flex;
@@ -63,10 +74,6 @@ h1, h2 {
 }
 
 .extMenu {
-    border: 1px solid #DEDEDE;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
