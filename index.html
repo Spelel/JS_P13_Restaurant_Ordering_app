@@ -25,19 +25,21 @@
     </main>
 
     <section>
-        <div class="payForm">
+        <div class="payForm" id="payForm">
             <p class="payFormInputText">Enter card details</p>
             <input class="payFormInput" type="text" id="name" placeholder="Enter your name">
-            <input class="payFormInput" type="number" id="carnNr" placeholder="Enter card number">
+            <input class="payFormInput" type="number" id="cardNr" placeholder="Enter card number">
             <input class="payFormInput" type="number" id="cardCvv" placeholder="Enter CVV">
             <button class="payBtn">Pay</button>
         </div>
     </section>
-
+    
     <footer>
-        <div class="cartMenu" id="cartMenu"></div>        
+        <div class="cartMenu" id="cartMenu"></div> 
+        <div id="payInput"></div>       
     </footer>
 
     <script src="index.js" type="module"></script>
 </body>
 </html>
+

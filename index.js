@@ -1,13 +1,54 @@
 import { menuArray } from "./data.js";
 
 let cartArray = []
+let userArry = []
+const popUp = document.getElementById("payForm")
+const nameInput = document.getElementById("name")
+const cardInput = document.getElementById("cardNr")
+const cvvInput = document.getElementById("cardCvv")
 
 document.addEventListener('click', (e)=> {
     if (e.target.classList.contains("extMenuBtn")) {      
         addBtn(e.target.id)
         renderCart()
     } 
+
+    if (e.target.classList.contains("removeBtn")) {
+        const index = parseInt(e.target.getAttribute("data-index"));
+        cartArray.splice(index, 1); // Remove the item
+        renderCart(); // Re-render the cart
+    }
+
+    if (e.target.classList.contains("completeOrderBtn")) {
+        popUp.style.display = "flex"
+    }
+
+    if (e.target.classList.contains("payBtn")) {
+        handlePayBtn()
+        userArry = []
+    }
 })
+
+
+
+function handlePayBtn (){
+    if (nameInput.value === ''){
+        alert("Please enter  your name")
+    } else if (cardInput.value === '') {
+        alert("Wrong card number")
+    } else if (cvvInput.value === '') {
+        alert("Wrong CVV number")
+    } else {
+        userArry.push(String(nameInput.value))
+        cvvInput.value = ''
+        nameInput.value = ''
+        cardInput.value = ''
+        popUp.style.display = 'none'
+        cartArray = []
+        renderCart()
+        renderPay()        
+    }
+}
 
 function addBtn(itemId){
     const selectedItem = menuArray.find(item => item.id === parseInt(itemId));
@@ -18,8 +59,7 @@ function addBtn(itemId){
             price: selectedItem.price
         });
     }
-    
-    console.log(cartArray);
+    console.log(cartArray)
 }
 
 
@@ -46,8 +86,9 @@ function menu() {
 
 function cartMenu() {
     if (cartArray.length === 0) {
-        return `<div class="yourOrder">Your cart is empty</div>`;
-    }
+        return `<div class="yourOrder"></div>`;
+    } 
+    
 
     let cartHtml = `<div class="yourOrder">Your Order</div>`;
 
@@ -81,24 +122,22 @@ function cartMenu() {
     return cartHtml;
 }
 
-document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("removeBtn")) {
-        const index = parseInt(e.target.getAttribute("data-index"));
-        cartArray.splice(index, 1); // Remove the item
-        renderCart(); // Re-render the cart
-    }
-});
+function thxOrder (){
+    let payHtml = `<div class="completeOrder" id="completeOrder">Thanks, ${userArry}! Your order in on its way!</div>`
+    return payHtml
+}
 
 
+function renderPay(){
+    document.getElementById("payInput").innerHTML = thxOrder()
+} 
 
 function renderCart() {
     document.getElementById("cartMenu").innerHTML = cartMenu();
 }
 
-
 function render (){
     document.getElementById("foodList").innerHTML = menu()
-    
 }
 render()
 
